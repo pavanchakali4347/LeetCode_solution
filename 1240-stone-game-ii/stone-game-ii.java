@@ -21,8 +21,6 @@ class Solution {
         }
         int maxStones = 0;
         for (int x = 1; x <= 2 * m; x++) {
-
-            // Stones current player gets
             int current = suffix[i]
                     - solve(i + x, Math.max(m, x),
                             piles, suffix, dp);

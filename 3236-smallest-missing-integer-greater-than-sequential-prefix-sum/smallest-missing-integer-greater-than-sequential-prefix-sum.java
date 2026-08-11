@@ -10,16 +10,18 @@ class Solution{
             break;
         }
       }
-     while(true){
-            boolean found = false;
-            for(int i=0;i<n;i++){
-                if(nums[i]== Prefixsum){
-                    found = true;
-                    break;
-                }
+      while(true){
+        boolean found=false;
+        for(int i=0;i<n;i++){
+            if(nums[i]==Prefixsum){
+                found=true;
+                break;
             }
-            if(!found)
-                return Prefixsum;
-            Prefixsum++;
+         
+        }  if(!found){
+            return Prefixsum;
         }
-} }
+        Prefixsum++;
+      }
+    }
+} 

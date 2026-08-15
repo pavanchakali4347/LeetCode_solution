@@ -3,10 +3,16 @@ class Solution {
         int tot = 0, n = A.length;
         boolean nonZero = false;
         for (int x : A) {
-            nonZero |= x > 0;
+            nonZero = nonZero | x > 0;
             tot ^= x;
         }
-        if (!nonZero) return 0;
-        return tot == 0 ? n - 1 : n;
+        if (!nonZero) {
+            return 0;
+        }
+        if (tot == 0) {
+            return n - 1;
+        } else {
+            return n;
+        }
     }
 }

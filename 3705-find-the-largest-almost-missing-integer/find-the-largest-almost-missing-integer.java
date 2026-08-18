@@ -25,13 +25,13 @@ class Solution {
         if (nums[0] == nums[n]) {
             return -1;
         }
-        if (mp.get(nums[0]) == 1 && mp.get(nums[n]) == 1) {
+        else if (mp.get(nums[0]) == 1 && mp.get(nums[n]) == 1) {
             return Math.max(nums[0], nums[n]);
         }
-        if (mp.get(nums[0]) == 1 && mp.get(nums[n]) > 1) {
+        else if (mp.get(nums[0]) == 1 && mp.get(nums[n]) > 1) {
             return nums[0];
         }
-        if (mp.get(nums[n]) == 1 && mp.get(nums[0]) > 1) {
+        else if (mp.get(nums[n]) == 1 && mp.get(nums[0]) > 1) {
             return nums[n];
         }
         return -1;

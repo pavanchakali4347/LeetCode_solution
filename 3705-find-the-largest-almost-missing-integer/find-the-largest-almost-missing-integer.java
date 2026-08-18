@@ -3,8 +3,7 @@ class Solution {
         int n = nums.length;
         HashMap<Integer, Integer> mp = new HashMap<>();
         for (int i = 0; i < n; i++) {
-            mp.put(nums[i], mp.getOrDefault(nums[i], 0) + 1);
-        }
+            mp.put(nums[i], mp.getOrDefault(nums[i], 0) + 1);}
         if (k == nums.length) {
             int maxValue = Integer.MIN_VALUE;
             for (int i = 0; i < n; i++) {

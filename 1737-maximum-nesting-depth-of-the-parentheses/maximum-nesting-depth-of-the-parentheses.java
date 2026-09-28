@@ -5,7 +5,7 @@ class Solution {
         for (char ch : s.toCharArray()) {
             if (ch == '(') {
                 depth++;
-                maxDepth = Math.max(maxDepth, depth);
+                if(depth>maxDepth) maxDepth=depth;
             }
             else if (ch == ')') {
                 depth--;
